@@ -1,7 +1,5 @@
-FROM nginx:stable-alpine
+FROM php:7.2-apache
 
-RUN rm -rf /usr/share/nginx/html/*
-
-COPY ./index.php /usr/share/nginx/html
+COPY ./index.php /var/www/html/
 
 EXPOSE 80
